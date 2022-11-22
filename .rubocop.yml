@@ -1,12 +1,12 @@
 AllCops:
   NewCops: enable
   Exclude:
-    - "db/**/*"
-    - "bin/*" 
-    - "config/**/*"
-    - "Guardfile"
-    - "Rakefile"
-    - "node_modules/**/*"
+    - 'db/**/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'Guardfile'
+    - 'Rakefile'
+    - 'node_modules/**/*'
 
   DisplayCopNames: true
 
@@ -14,13 +14,13 @@ Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
   Include:
-    - "app/controllers/*"
-    - "app/models/*"
+    - 'app/controllers/*'
+    - 'app/models/*'
   Max: 20
 Metrics/AbcSize:
   Include:
-    - "app/controllers/*"
-    - "app/models/*"
+    - 'app/controllers/*'
+    - 'app/models/*'
   Max: 50
 Metrics/ClassLength:
   Max: 150
@@ -57,4 +57,6 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
+  Enabled: false
+Layout/EndOfLine:
   Enabled: false
