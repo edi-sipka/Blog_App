@@ -1,57 +1,94 @@
-# Project Name
+# 📖 [Blog_App] <a name="about-project"></a>
 
-Blog_App
+> This is a basic Blog website that allows users to create, edit, comment and delete posts, keeping data in a database. This project implements both authorization and authentication in order to provide extended functionality to logged in and authorized users.
 
-# Description the project.
+## 🛠 Built With <a name="built-with"></a>
 
-This is a basic Blog website that allows users to create, edit, comment and delete posts, keeping data in a database. This project implements both authorization and authentication in order to provide extended functionality to logged in and authorized users.
+### Tech Stack <a name="tech-stack"></a>
 
-# Built With
+<details>
+  <summary>BackEnd</summary>
+  <ul>
+    <li><a href="https://railsguide.com/">Rails</a></li>
+  </ul>
+</details>
 
-Languages: Ruby
-Frameworks: Ruby On Rails
-Technologies used: Visual Studio Code
+<details>
+  <summary>Test</summary>
+  <ul>
+    <li><a href="https://rspec.com/">RSPEC</a></li>
+  </ul>
+</details>
 
-# Requirements
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-In order to work on this project, you need to have the following dependencies installed:
+<!-- Features -->
 
-Ruby
-Postgresql
-Node.js
-Yarn
-Rails
+### Key Features <a name="key-features"></a>
 
-# Getting Started
+- **[Add Post]** - Add your post.
+- **[Display all posts]** - Display recent posts.
+- **[Delete post ]** - Delete specific post.
 
-Clone this repository
-`$ git clone https://github.com/edi-sipka/Blog_App`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-`$ cd blog_app`
+<!-- LIVE DEMO -->
 
-Commands to run
+## 🚀 Live Version <a name="live-demo"></a>
 
-Run
+- [Comming soon]()
 
-`$ bundle install`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To get all the gems required for the project
+<!-- GETTING STARTED -->
 
-## Start
+## 💻 Getting Started <a name="getting-started"></a>
 
-to start the app please run
+To get a local copy up and running, follow these steps.
 
+### Prerequisites
+
+In order to run this project you need: Visual Studio Code and Installed Rails.
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```bash command
+$ git clone $ git clone https://github.com/edi-sipka/Blog_App
+```
+
+### Install
+
+Install this project with:
+
+```bash command
+you@your-Pc-name:~$ cd <Blog_App>
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```bash command
 ` $ rails server`
+```
 
-To run all test Run
+### Run tests
 
-`$ rspec spec/`
+To run tests, run the following command:
+rspec
 
-to run controllers test only please run
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-` $ rspec spec/request`
+<!-- AUTHORS -->
 
-## Authors
+## 👥 Authors <a name="authors"></a>
 
 👤 _Edi Sipka_
 
@@ -59,21 +96,65 @@ to run controllers test only please run
 - Twitter: [@sipka_edii](https://twitter.com/sipka_edii)
 - LinkedIn: [Edi Sipka](https://www.linkedin.com/in/edi-%C5%A1ipka-5b681b202/)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Add likes on post]**
+- [ ] **[Add comments on post]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
+Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-# Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
 
-Microverse
-etc..
+If you like this project give as a star! ⭐️
 
-# 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- Microverse
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+- **[How I can run this project?]**
+
+  - [After cloning repository, run rails server.]
+
+- **[Can I add likes on post?]**
+
+  - [You can add likes and comments on a post.]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
