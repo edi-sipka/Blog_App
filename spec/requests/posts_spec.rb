@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe 'Posts', type: :request do
+RSpec.describe 'Posts', type: :request do
   describe 'GET/index' do
     it 'Returns http success message and view' do
       get '/users/:user_id/posts'

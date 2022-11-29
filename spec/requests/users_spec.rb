@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe 'Users', type: :request do
+RSpec.describe 'Users', type: :request do
   describe 'GET/index' do
     it 'Returns http success message and view' do
       get '/'
