@@ -7,6 +7,3 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-comments = Comment.create([
-  {author_id: 2, post_id: 2, text: 'Thanks', user_id:2},
-])

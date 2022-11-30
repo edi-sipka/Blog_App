@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @pagy, @posts = pagy(@user.posts,  items: 2)
   end
 
-  def show; end
+  def show
+  end 
 end
