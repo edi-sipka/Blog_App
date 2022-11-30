@@ -1,1 +1,49 @@
-<h1> List of users by id </h1>
+
+<div class="card mb-3 text-center" style="max-width: 540px;">
+  <div class="row g-0 text-center">
+    <div class="col-md-4">
+      <img src="<%= @user.photo %>" class="img-fluid rounded-start" alt="profile">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4 class="card-title"><%= @user.name %></h4>
+        <p class="card-text"><h6>Number of posts: <%= @user.posts_counter %></h6></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-3 border-info" style="width: 680px;">
+    <div class='card-header'>Bio</div>
+    <div class="card-body">
+      <p class="card-text"><%= @user.bio %></p>
+    </div>
+  </div>
+   </div>
+  <% if @user.recent_posts.empty? %>
+    <div class="card mb-3" style="width: 540px;">
+      <div class="card-header ">No Posts</div>
+      <div class="card-body">
+        <h5 class="card-title">Please submit a new post.</h5>
+      </div>
+    </div>
+  <% else %>
+    <% @user.recent_posts.each do |post| %>
+      <%= link_to user_post_path(user_id:@user.id, id: post.id), class:'nav-link' do%>
+        <div class="card mb-3" style="width: 540px;">
+          <div class="card-header"><%= post.title %></div>
+          <div class="card-body">
+            <h5 class="card-title"><%= post.text %></h5>
+          </div>
+          <div class='card-footer d-flex gap-2 justify-content-end'>
+            <p class="card-text"><span class="text-muted">Comments: <%= post.comments_counter %></span></p>
+            |
+            <p class="card-text"><span class="text-muted">Likes: <%= post.likes_counter %></span></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= link_to "See all posts", user_posts_path(user_id: @user.id), class:"btn btn-dark mb-3" %>
+</div>
+
+
