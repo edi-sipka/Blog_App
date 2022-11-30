@@ -1,1 +1,18 @@
-<h1> List of all users </h1>
+<h1 class='text-center mt-4'>Users</h1>
+<% @users.each do |user| %>
+<%= link_to user_path(id: user.id), class:"nav-link mt-4 d-flex justify-content-center" do %>
+<div class="card mb-3 text-center" style="max-width: 540px;">
+  <div class="row g-0 text-center">
+    <div class="col-md-4">
+      <img src="<%= user.photo %>" class="img-fluid rounded-start" alt="profile">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4 class="card-title"><%= user.name %></h4>
+        <p class="card-text"><h6>Number of posts: <%= user.posts_counter %></h6></p>
+      </div>
+    </div>
+  </div>
+</div>
+ <% end %>
+  <% end %>
