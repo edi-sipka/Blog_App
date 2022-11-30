@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+likes = Like.create([
+  {author_id: 2, post_id: 1},
+  {author_id: 3, post_id: 1},
+  {author_id: 1, post_id: 2},
+  {author_id: 2, post_id: 1},
+  {author_id: 1, post_id: 1}
+])

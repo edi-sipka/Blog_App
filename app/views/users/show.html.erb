@@ -28,7 +28,7 @@
     </div>
   <% else %>
     <% @user.recent_posts.each do |post| %>
-      <%= link_to user_post_url(user_id:@user.id, id: post.id), class:'nav-link' do%>
+      <%= link_to user_post_path(user_id:@user.id, id: post.id), class:'nav-link' do%>
         <div class="card mb-3" style="width: 540px;">
           <div class="card-header"><%= post.title %></div>
           <div class="card-body">
