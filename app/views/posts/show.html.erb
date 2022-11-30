@@ -1,1 +1,35 @@
-<h1> List of specific post of specific user </h1>
+
+<div class='mt-3 d-flex align-items-center flex-column'>
+  <div class="card mb-3 border-primary" style="width: 670px;">
+    <div class="card-header bg-primary text-white">
+      <div class='row'>
+        <div class='col-md-8'><%= @posts.title %> by <%= @user.name %></div>
+        <div class='col-md-4 d-flex gap-2'>
+          <p class="card-text"><small class="text-white">Comments: <%= @posts.comments_counter %></small></p>
+          | 
+          <p class="card-text"><small class="text-white">Likes: <%= @posts.likes_counter %></small></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= @posts.text%></p>
+    </div>
+  </div>
+<h6>Recent Comments</h6>
+    <% if @comments.empty? %>
+     <div class="card mb-3 border-secondary" style="width: 540px;">
+       <div class="card-body">
+            <p class="card-text">No Comments</p>
+          </div>
+        </div>
+ <% else %>
+     <div class="card mb-3 border-secondary" style="width: 540px;">
+          <div class="card-body">
+            <% @comments.each do |comment| %>
+              <p class="card-text"><%= comment.author.name %>: <%= comment.text %></p>
+              <% end %>
+          </div>
+      </div>
+      <% end %>
+     
+  
