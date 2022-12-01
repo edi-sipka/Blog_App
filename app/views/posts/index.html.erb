@@ -12,6 +12,9 @@
   </div>
 </div>
 
+ <%= link_to "Add New Post", new_user_post_path(user_id: @user.id), class:"btn btn-primary my-3" %>
+
+  <h4>Posts</h4>
 <h1 class='text-center mt-4'>All posts</h1>
 <% @posts.each do |post| %>
 <%= link_to user_post_path(user_id: @user.id, id: post.id), class:"nav-link mt-4 d-flex justify-content-center" do %>

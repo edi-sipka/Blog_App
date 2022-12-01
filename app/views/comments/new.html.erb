@@ -1,0 +1,9 @@
+<div class='mt-5 d-flex align-items-center flex-column'>
+  <h1>Enter your comment below: </h1>
+  <%= form_with model: @comments, url: user_post_comments_path do |f| %>
+    <div class='mb-3'>
+      <%= f.text_area :text, size:"50x3",placeholder: 'Enter Your Comment', class:'form-control'%>
+    </div>
+    <%= f.submit "Comment", class:'btn btn-primary' %>
+  <% end %>
+</div>
