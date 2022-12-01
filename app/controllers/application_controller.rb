@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
+
+  before_action :current_user
+
   def current_user
-    User.first
+   Current.user = User.first
   end
 end
