@@ -34,7 +34,8 @@
    <% end %> 
 
    <div class='mt-3 d-flex align-items-center flex-column'>
-    <%= link_to "Add comment", user_posts_path(user_id: @user.id), class:"btn btn-primary mt-3 d-flex align-items-center flex-column'" %>
+    <%= link_to "Add Comment", new_user_post_comment_path(@user.id, @posts.id), class:"btn btn-primary" %>
+</div>
     </div>
       
        
