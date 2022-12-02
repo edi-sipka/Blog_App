@@ -1,0 +1,14 @@
+<div class='mt-3 d-flex align-items-center flex-column'>
+  <h1>Create New Post</h1>
+  <%= form_with model: @post, url: user_posts_path do |form| %>
+    <div class="mb-3">
+      <%= form.text_field :title, placeholder:"Enter Post Title", class:"form-control"%>
+    </div>
+    <div class="mb-3">
+      <%= form.text_area :text, size:"70x6" ,placeholder:"Enter Your Post", class:"form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit "Add New Post", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
