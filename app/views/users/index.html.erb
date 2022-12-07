@@ -1,6 +1,6 @@
 <h1 class='text-center mt-4'>Users</h1>
 <% @users.each do |user| %>
-  <%= link_to user_path(id: user.id), class:"nav-link mt-4 d-flex justify-content-center" do %>
+  <%= link_to user_path(user.id), class:"nav-link mt-4 d-flex justify-content-center" do %>
     <div class="card mb-3 text-center" style="max-width: 540px;">
       <div class="row g-0 text-center">
         <div class="col-md-4">
