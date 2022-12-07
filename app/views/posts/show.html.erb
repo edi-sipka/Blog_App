@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="card-body">
+     <div class="card-body">
       <p class="card-text"><%= @posts.text%></p>
     </div>
   </div>
@@ -18,31 +18,32 @@
 
   <h6>Recent Comments</h6>
       <% if @comments.empty? %>
-      <div class="card mb-3 border-secondary" style="width: 540px;">
-        <div class="card-body">
-         <p class="card-text">No Comments</p>
+        <div class="card mb-3 border-secondary" style="width: 540px;">
+          <div class="card-body">
+            <p class="card-text">No Comments</p>
          </div>
         </div>
      </div>
+
  <% else %>
      <div class="card mb-3 border-secondary" style="width: 540px;">
       <div class="card-body">
         <% @comments.each do |comment| %>
           <p class="card-text"><%= comment.author.name %>: <%= comment.text %></p>
-    <% end %>
+  <% end %>
       </div>
     </div>
-   <% end %> 
+  <% end %> 
 
    <div class='mt-3 d-flex align-items-center flex-column'>
     <%= link_to "Add Comment", new_user_post_comment_path(@user.id, @posts.id), class:"btn btn-primary" %>
-</div>
-<div class="card-footer d-flex align-items-center flex-column">
-      <%= form_with model: @like, url: user_post_likes_path(post_id: @posts.id) do |f| %>
-        <%= f.submit "Like", class:"btn btn-outline-primary" %>
-      <% end %>
     </div>
+  <div class="card-footer d-flex align-items-center flex-column">
+    <%= form_with model: @like, url: user_post_likes_path(post_id: @posts.id) do |f| %>
+      <%= f.submit "Like", class:"btn btn-outline-primary" %>
+  <% end %>
     </div>
+  </div>
       
        
 
