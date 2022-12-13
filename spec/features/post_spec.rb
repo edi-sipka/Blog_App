@@ -51,5 +51,6 @@ RSpec.describe Post, type: :system do
       visit user_post_path(user.id, subject.id)
       page.has_content?(subject.title)
     end
+    
   end
 end
