@@ -1,0 +1,26 @@
+<div class="container">
+ <div class="row">
+  <div class="col-12 pb-3 pt-3">
+   <div class="float-end">
+   <% if user_signed_in? %>
+
+   <div class="dropdown">
+  <a class="btn btn-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <%= current_user.name %>
+  </a>
+
+  <ul class="dropdown-menu">
+
+    <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+    <%= button_to "Sign Out", destroy_user_session_path, :method => :delete , class: "dropdown-item" %>
+  </ul>
+</div>
+
+
+  <% else %>
+    <%= link_to "Log In", new_user_session_path, class: "btn btn-outline-primary" %>
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+  <% end %>
+    </div>
+    <p class="h3"><%= link_to "Blog App", root_path %></p>
+
