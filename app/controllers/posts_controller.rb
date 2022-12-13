@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @user = User.find(params[:user_id])
     @pagy, @posts = pagy(@user.posts.includes(:comments), items: 2)
@@ -16,7 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.author_id = Current.user.id
+    @post.author_id = current_user.id
     if @post.save
       redirect_to "/users/#{Current.user.id}/posts"
     else
