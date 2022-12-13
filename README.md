@@ -96,6 +96,11 @@ rspec
 - Twitter: [@sipka_edii](https://twitter.com/sipka_edii)
 - LinkedIn: [Edi Sipka](https://www.linkedin.com/in/edi-%C5%A1ipka-5b681b202/)
 
+👤 **Peter Njuguna**
+
+- GitHub: [@peterboro](https://github.com/peterboro)
+- LinkedIn: [Peter Njuguna](https://www.linkedin.com/in/peter-n-3bb940122/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

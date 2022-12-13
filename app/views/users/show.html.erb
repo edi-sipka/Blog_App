@@ -40,9 +40,11 @@
             <p class="card-text"><span class="text-muted">Likes: <%= post.likes_counter %></span></p>
           </div>
         </div>
+        
       <% end %>
     <% end %>
   <% end %>
+  
   <%= link_to "See all posts", user_posts_path(user_id: @user.id), class:"btn btn-dark mb-3" %>
 </div>
 
