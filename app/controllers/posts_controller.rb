@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+ 
 
   def index
     @user = User.find(params[:user_id])
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.author_id = current_user.id
     if @post.save
-      redirect_to "/users/#{Current.user.id}/posts"
+      redirect_to "/users/#{current_user.id}/posts"
     else
       render :new
     end
