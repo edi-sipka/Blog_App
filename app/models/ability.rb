@@ -8,11 +8,9 @@ class Ability
     user ||= User.new 
       can :manage, :all
     else
-      can :destroy, Post do |post|
-        post.author = user
-      end
-      can :destroy, Comment do |comment|
-        comment.author = user
+      can :destroy, Post, author: user
+      can :destroy, Comment, author: user
+      can :read, :all
       end
     end
 
