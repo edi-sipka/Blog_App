@@ -7,6 +7,7 @@
           <p class="card-text"><small class="text-white">Comments: <%= @posts.comments_counter %></small></p>
           | 
           <p class="card-text"><small class="text-white">Likes: <%= @posts.likes_counter %></small></p>
+          
         </div>
       </div>
     </div>
@@ -14,6 +15,10 @@
       <p class="card-text"><%= @posts.text%></p>
     </div>
   </div>
+
+   
+   
+  
 
 
   <h6>Recent Comments</h6>
@@ -29,6 +34,9 @@
       <div class="card-body">
         <% @comments.each do |comment| %>
           <p class="card-text"><%= comment.author.name %>: <%= comment.text %></p>
+ 
+           <%= link_to "Delete","", class:"btn btn-outline-danger" %>
+           
     <% end %>
       </div>
     </div>
@@ -41,8 +49,15 @@
       <%= form_with model: @like, url: user_post_likes_path(post_id: @posts.id) do |f| %>
         <%= f.submit "Like", class:"btn btn-outline-primary" %>
       <% end %>
+      <div class="card-footer d-flex align-items-center flex-column">
+       
+        <%= link_to "Delete","", class:"btn btn-outline-danger" %>
+     
+      </div>
     </div>
     </div>
+
+   
       
        
 

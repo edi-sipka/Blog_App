@@ -24,6 +24,20 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.comments.destroy_all
+    @post.likes.destroy_all
+    @post.destroy
+
+    if @post.destroy
+      @post.update_posts_counter
+      redirect_to user_posts_path(current_user.id)
+    else
+      render :new
+    end
+  end
+
   private
 
   def post_params

@@ -16,6 +16,21 @@ class CommentsController < ApplicationController
     end
   end
 
+  
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    @comment.likes.destroy_all
+    @comment.destroy
+
+    if @comment.destroy
+      @comment.update_comment_counter
+      redirect_to user_post_path(@post.author_id, @post.id)
+    else
+      render :new
+    end
+  end
+
   private
 
   def comment_params
