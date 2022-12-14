@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def new
     @comments = Comment.new
   end
@@ -19,12 +20,11 @@ class CommentsController < ApplicationController
   
   def destroy
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.find(params[:id])
-    @comment.likes.destroy_all
-    @comment.destroy
+    @comments = @post.comments.find(params[:id])
+    @comments.destroy
 
-    if @comment.destroy
-      @comment.update_comment_counter
+    if @comments.destroy
+      @comments.update_comment_counter
       redirect_to user_post_path(@post.author_id, @post.id)
     else
       render :new

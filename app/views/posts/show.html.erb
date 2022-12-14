@@ -28,8 +28,8 @@
       <div class="card-body">
         <% @comments.each do |comment| %>
           <p class="card-text"><%= comment.author.name %>: <%= comment.text %></p>
- 
-           <%= link_to "Delete","", class:"btn btn-outline-danger" %>
+            
+           <%= link_to "Delete", user_post_comment_path(user_id: @user.id, post_id: @posts.id, id: comment.id), method: :delete, class:"btn btn-outline-danger" %>
            
     <% end %>
       </div>
@@ -44,11 +44,13 @@
         <%= f.submit "Like", class:"btn btn-outline-primary" %>
       <% end %>
       <div class="card-footer d-flex align-items-center flex-column">
-       
-        <%= link_to "Delete","", class:"btn btn-outline-danger" %>
-     
+
+      <% if can? :destroy, @posts %>
+        <%= button_to "Delete", user_post_path(id: @posts.id), method: :delete, class:"btn btn-outline-danger" %>
+        <% end %>
       </div>
     </div>
+
     </div>
 
    
