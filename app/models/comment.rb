@@ -4,7 +4,6 @@ class Comment < ApplicationRecord
 
   after_save :update_comments_counter
 
-
   def update_comment_counter
     comment.decrement!(:comments_counter)
   end
