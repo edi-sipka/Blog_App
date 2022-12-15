@@ -16,13 +16,16 @@
     </div>
   </div>
   <h6>Recent Comments</h6>
-      <% if @comments.empty? %>
+        <% if @comments.empty? %>
         <div class="card mb-3 border-secondary" style="width: 540px;">
           <div class="card-body">
             <p class="card-text">No Comments</p>
          </div>
         </div>
       </div>
+
+      
+    
 
      <% else %>
      
@@ -32,7 +35,7 @@
           <p class="card-text"><%= comment.author.name %>: <%= comment.text %></p>
 
           <% if can? :destroy, comment %>
-           <%= button_to "Delete", user_post_comment_path(user_id: @user.id, post_id: @posts.id, id: comment.id), method: :delete, class:"btn btn-outline-danger" %>
+           <%= button_to "Delete, user_post_comment_path(user_id: @user.id, post_id: @posts.id, id: comment.id), method: :delete, class:"btn btn-outline-danger" %>
            <% end %>
           <% end %>
       </div>
