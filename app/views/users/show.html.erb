@@ -1,7 +1,7 @@
 
 <div class="card mb-3 text-center" style="max-width: 540px;">
   <div class="row g-0 text-center">
-    <div class="col-md-4">
+    <div class="col-md-4 mb-3">
       <img src="<%= @user.photo %>" class="img-fluid rounded-start" alt="profile">
     </div>
     <div class="col-md-8">
@@ -9,15 +9,14 @@
         <h4 class="card-title"><%= @user.name %></h4>
         <p class="card-text"><h6>Number of posts: <%= @user.posts_counter %></h6></p>
       </div>
-    </div>
-  </div>
-</div>
-<div class="card mb-3 border-info" style="width: 680px;">
-    <div class='card-header'>Bio</div>
+      <div class='card-header bg-primary'>Bio</div>
     <div class="card-body">
       <p class="card-text"><%= @user.bio %></p>
     </div>
   </div>
+    </div>
+  </div>
+</div>
    </div>
   <% if @user.recent_posts.empty? %>
     <div class="card mb-3" style="width: 540px;">
@@ -46,7 +45,7 @@
     <% end %>
   <% end %>
   
-  <%= link_to "See all posts", user_posts_path(user_id: @user.id), class:"btn btn-dark mb-3" %>
+  <%= link_to "See all posts", user_posts_path(user_id: @user.id), class:"btn btn-dark mb-3 col-2" %>
 </div>
 
 
