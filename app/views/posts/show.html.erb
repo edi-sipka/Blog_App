@@ -7,6 +7,7 @@
           <p class="card-text"><small class="text-white">Comments: <%= @posts.comments_counter %></small></p>
           | 
           <p class="card-text"><small class="text-white">Likes: <%= @posts.likes_counter %></small></p>
+          
         </div>
       </div>
     </div>
@@ -14,36 +15,48 @@
       <p class="card-text"><%= @posts.text%></p>
     </div>
   </div>
-
-
   <h6>Recent Comments</h6>
-      <% if @comments.empty? %>
+        <% if @comments.empty? %>
         <div class="card mb-3 border-secondary" style="width: 540px;">
           <div class="card-body">
             <p class="card-text">No Comments</p>
          </div>
         </div>
-     </div>
+      </div>
 
- <% else %>
+      
+    
+
+     <% else %>
+     
      <div class="card mb-3 border-secondary" style="width: 540px;">
       <div class="card-body">
         <% @comments.each do |comment| %>
           <p class="card-text"><%= comment.author.name %>: <%= comment.text %></p>
-  <% end %>
+
+          <% if can? :destroy, comment %>
+           <%= button_to "Delete, user_post_comment_path(user_id: @user.id, post_id: @posts.id, id: comment.id), method: :delete, class:"btn btn-outline-danger" %>
+           <% end %>
+          <% end %>
       </div>
     </div>
   <% end %> 
 
-   <div class='mt-3 d-flex align-items-center flex-column'>
+    <div class='mt-3 d-flex align-items-center flex-column'>
     <%= link_to "Add Comment", new_user_post_comment_path(@user.id, @posts.id), class:"btn btn-primary" %>
-    </div>
+   </div>
   <div class="card-footer d-flex align-items-center flex-column">
-    <%= form_with model: @like, url: user_post_likes_path(post_id: @posts.id) do |f| %>
-      <%= f.submit "Like", class:"btn btn-outline-primary" %>
-  <% end %>
-    </div>
-  </div>
+      <%= form_with model: @like, url: user_post_likes_path(post_id: @posts.id) do |f| %>
+        <%= f.submit "Like", class:"btn btn-outline-primary" %>
+      <% end %>
+      <div class="card-footer d-flex align-items-center flex-column">
+      <% if can? :destroy, @posts %>
+        <%= button_to "Delete", user_post_path(id: @posts.id), method: :delete, class:"btn btn-outline-danger" %>
+        <% end %>
+      </div>
+    </div> 
+   </div>
+
       
        
 
