@@ -28,8 +28,7 @@
       <div class="card-body">
         <% @comments.each do |comment| %>
           <p class="card-text"><%= comment.author.name %>: <%= comment.text %></p>
-            
-           <%= link_to "Delete", user_post_comment_path(user_id: @user.id, post_id: @posts.id, id: comment.id), method: :delete, class:"btn btn-outline-danger" %>
+             
            
     <% end %>
       </div>
