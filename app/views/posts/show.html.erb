@@ -46,7 +46,6 @@
         <%= f.submit "Like", class:"btn btn-outline-primary" %>
       <% end %>
       <div class="card-footer d-flex align-items-center flex-column">
-
       <% if can? :destroy, @posts %>
         <%= button_to "Delete", user_post_path(id: @posts.id), method: :delete, class:"btn btn-outline-danger" %>
         <% end %>
