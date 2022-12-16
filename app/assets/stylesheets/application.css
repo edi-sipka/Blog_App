@@ -13,6 +13,6 @@
  *= require_tree .
  *= require_self
  */
-div{
-    background-color: red;
+div {
+  background-color: red;
 }
