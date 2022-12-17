@@ -12,7 +12,7 @@ RSpec.describe 'Comments API', type: :request do
           user_id: { type: :integer },
           post_id: { type: :integer }
         },
-        required: [ 'comment', 'user_id', 'post_id' ]
+        required: %w[comment user_id post_id]
       }
 
       response '201', 'comment created' do
@@ -31,19 +31,19 @@ RSpec.describe 'Comments API', type: :request do
     get 'Retrieves a comment' do
       tags 'Comments'
       produces 'application/json'
-      parameter name: :id, :in => :path, :type => :string
+      parameter name: :id, in: :path, type: :string
 
       response '200', 'comment found' do
         schema type: :object,
-          properties: {
-            id: { type: :integer },
-            comment: { type: :string },
-            user_id: { type: :integer },
-            post_id: { type: :integer },
-            created_at: { type: :string },
-            updated_at: { type: :string }
-          },
-          required: [ 'id', 'comment', 'user_id', 'post_id', 'created_at', 'updated_at' ]
+               properties: {
+                 id: { type: :integer },
+                 comment: { type: :string },
+                 user_id: { type: :integer },
+                 post_id: { type: :integer },
+                 created_at: { type: :string },
+                 updated_at: { type: :string }
+               },
+               required: %w[id comment user_id post_id created_at updated_at]
 
         let(:id) { Comment.create(comment: 'Comment', user_id: 1, post_id: 1).id }
         run_test!
@@ -55,7 +55,7 @@ RSpec.describe 'Comments API', type: :request do
       end
 
       response '406', 'unsupported accept header' do
-        let(:'Accept') { 'application/foo' }
+        let(:Accept) { 'application/foo' }
         run_test!
       end
     end

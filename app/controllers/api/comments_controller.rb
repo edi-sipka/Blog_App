@@ -2,7 +2,6 @@ class Api::CommentsController < ApplicationController
   include Response
   include ExceptionHandler
 
-    
   def index
     post = Post.find(params[:post_id])
     comments = post.comments.includes(:author)

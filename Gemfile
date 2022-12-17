@@ -66,9 +66,9 @@ group :development, :test do
   gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
+  gem 'rswag-specs'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rswag-specs'
 end
 
 group :development do
