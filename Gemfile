@@ -37,6 +37,8 @@ gem 'cancancan'
 
 gem 'devise-jwt'
 
+gem 'rswag'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -66,6 +68,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rswag-specs'
 end
 
 group :development do
