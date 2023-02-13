@@ -41,7 +41,7 @@
 
 ## 🚀 Live Version <a name="live-demo"></a>
 
-- [Comming soon]()
+- [Coming soon]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
